@@ -1,0 +1,12 @@
+.test-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.test-info{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%,0);
+}
