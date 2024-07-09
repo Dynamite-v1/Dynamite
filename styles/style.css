@@ -18,10 +18,11 @@ body{
     align-items: center;
 }
 .Logo{
-    width: 30%;
+    width: 15%;
+    height: 75px;
 }
 .btn-container{
-    height:100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +40,6 @@ body{
         font-size: large !important;
     }
     .Logo{
-        width: 40%;
+        width: 20%;
     }
 }
