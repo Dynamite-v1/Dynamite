@@ -1,3 +1,6 @@
+body{
+    overflow-y: hidden;
+}
 .start-page-body{
     background-image: url(../img/strat-page/start-page-bg.jpg);
     background-repeat: no-repeat;
@@ -7,14 +10,18 @@
     background-image: url(../img/strat-page/btn-1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 25%;
+    background-position: center;
+    width: 50%;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: end;
 }
+.Logo{
+    width: 30%;
+}
 .btn-container{
-    height: calc(100vh - 100px);
+    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,3 +29,6 @@
 .btn-tri{
     background-image: url(../img/strat-page/btn-1.png);
 }
+/* .responsive-container{
+    height: 75%;
+} */
