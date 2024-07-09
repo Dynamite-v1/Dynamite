@@ -15,7 +15,7 @@ body{
     height: 100px;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 }
 .Logo{
     width: 30%;
@@ -28,4 +28,14 @@ body{
 }
 .btn-tri{
     background-image: url(../img/strat-page/btn-1.png);
+}
+
+@media screen and (max-height:402px){
+    .Logo-con{
+        width: 25%;
+        height: 50px;
+    }
+    .btn-text{
+        font-size: x-large !important;
+    }
 }
