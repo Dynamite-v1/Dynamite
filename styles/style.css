@@ -1,19 +1,24 @@
-.test-text{
-    width: 100px;
-    margin: 30px;
-    animation: loading 2s infinite;
+.start-page-body{
+    background-image: url(../img/strat-page/start-page-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-
-
-@keyframes loading {
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+.Logo-con{
+    background-image: url(../img/strat-page/btn-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.btn-container{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-tri{
+    background-image: url(../img/strat-page/btn-1.png);
 }
