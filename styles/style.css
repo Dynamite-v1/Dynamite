@@ -4,7 +4,7 @@ body{
 .start-page-body{
     background-image: url(../img/strat-page/start-page-bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 .Logo-con{
     background-image: url(../img/strat-page/btn-1.png);
@@ -32,10 +32,13 @@ body{
 
 @media screen and (max-height:402px){
     .Logo-con{
-        width: 25%;
+        width: 30%;
         height: 50px;
     }
     .btn-text{
-        font-size: x-large !important;
+        font-size: large !important;
+    }
+    .Logo{
+        width: 40%;
     }
 }
