@@ -1,0 +1,8 @@
+.start-page-body{
+    font-family: Venite;
+}
+
+@font-face {
+    font-family: 'Venite';
+    src: url(../font/VeniteAdoremus-rgRBA.ttf) format('truetype');
+}
