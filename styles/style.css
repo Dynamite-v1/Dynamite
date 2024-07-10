@@ -31,6 +31,45 @@ body{
 .btn-tri{
     background-image: url(../img/strat-page/btn-1.png);
 }
+.corner-btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.plus-btn{
+    top: 50px;
+    left: 50px;
+}
+.settings-btn{
+    top: 50%;
+    left: 50px;
+    transform: translate(0,-50%);
+}    
+.music-btn{
+    top: 40px;
+    right: 50px;
+    width: 200px;
+
+}
+.music-btn-text{
+    top: 85px;
+    right: 50px;
+    width: 160px;
+    /* z-index: 2; */
+}
+.question-mark-btn{
+    top: 50%;
+    right: 55px;
+    transform: translate(0,-50%);
+}
+.controler-btn{
+    bottom: 80px;
+    right: 55px;
+}
+
+
+
+
 
 @media screen and (max-height:402px){
     .Logo-con{
@@ -43,5 +82,24 @@ body{
     .Logo{
         width: 17%;
         /* height: fit-content; */
+    }
+    .corner-btn{
+        width: 60px;
+        height: 60px;
+    }
+    .plus-btn{
+        top: 0px;
+    }
+    .music-btn{
+        height: 150px;
+        top: -30px;
+        right: 150px;
+    }
+    .music-btn-text{
+        top: 15px;
+        right: 100px;
+    }
+    .controler-btn{
+        bottom: 0px;
     }
 }
