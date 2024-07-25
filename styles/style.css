@@ -12,7 +12,6 @@
 
 .main{
     width: 100vw;
-    height: 100vh;
     background-image: url(../img/IMG_20240721_151428_281.jpg);
     background-position: center;
     background-size: cover;
@@ -51,5 +50,11 @@
 @media screen and (max-height:481px){
     .menu-btn{
         font-size: medium;
+    }
+    .menu-container{
+        align-items: start;
+    }
+    .menu{
+        gap: 15px;
     }
 }
