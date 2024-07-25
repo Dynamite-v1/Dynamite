@@ -1,105 +1,46 @@
-body{
-    overflow-y: hidden;
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all ease 2S;
+    cursor: pointer;
 }
-.start-page-body{
-    background-image: url(../img/strat-page/start-page-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.Logo-con{
-    background-image: url(../img/strat-page/btn-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/IMG_20240721_151428_281.jpg);
     background-position: center;
-    width: 50%;
-    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.menu-container{
+    width: 25vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Logo{
-    width: 15%;
-    /* height: 75px; */
-}
-.btn-container{
-    height: 100vh;
+.menu{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    margin-top: 15px;
+    gap: 20px;
+    padding: 0px;
+    margin-bottom: 0px;
 }
-.btn-tri{
-    background-image: url(../img/strat-page/btn-1.png);
-}
-.corner-btn{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-}
-.plus-btn{
-    top: 50px;
-    left: 50px;
-}
-.settings-btn{
-    top: 50%;
-    left: 50px;
-    transform: translate(0,-50%);
-}    
-.music-btn{
-    top: 40px;
-    right: 50px;
-    width: 200px;
-
-}
-.music-btn-text{
-    top: 85px;
-    right: 50px;
-    width: 160px;
-    /* z-index: 2; */
-}
-.question-mark-btn{
-    top: 50%;
-    right: 55px;
-    transform: translate(0,-50%);
-}
-.controler-btn{
-    bottom: 80px;
-    right: 55px;
+.menu-btn{
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
 }
 
 
-
-
-
-@media screen and (max-height:402px){
-    .Logo-con{
-        width: 30%;
-        height: 50px;
+@keyframes logo {
+    0%{
+        transform: translate(-50%,-50%) scale(1);
     }
-    .btn-text{
-        font-size: large !important;
-    }
-    .Logo{
-        width: 17%;
-        /* height: fit-content; */
-    }
-    .corner-btn{
-        width: 60px;
-        height: 60px;
-    }
-    .plus-btn{
-        top: 0px;
-    }
-    .music-btn{
-        height: 150px;
-        top: -30px;
-        right: 150px;
-    }
-    .music-btn-text{
-        top: 15px;
-        right: 100px;
-    }
-    .controler-btn{
-        bottom: 0px;
+    100%{
+        transform: translate(-51%,-51%) scale(0);
     }
 }
