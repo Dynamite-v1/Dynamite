@@ -12,15 +12,15 @@ body{
 
 .main{
     width: 100vw;
-    height: fit-content;
-    /* background-image: url(../img/IMG_20240721_151428_281.jpg);
+    height: 100vh;
+    background-image: url(../img/IMG_20240721_151428_281.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 .menu-container{
     width: 25vw;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
