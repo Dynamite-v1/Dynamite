@@ -12,6 +12,7 @@
 
 .main{
     width: 100vw;
+    height: fit-content;
     /* background-image: url(../img/IMG_20240721_151428_281.jpg);
     background-position: center;
     background-size: cover;
@@ -19,7 +20,7 @@
 }
 .menu-container{
     width: 25vw;
-    /* height: 100vh; */
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
