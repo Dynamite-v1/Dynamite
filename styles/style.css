@@ -1,13 +1,89 @@
 body{
     overflow: hidden;
 }
-.logo{
+
+.logo-container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all ease 2S;
-    cursor: pointer;
+}
+.logo-container h1 {
+    color: #c0392b;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-wrap: nowrap;
+    text-shadow: black 1px 1px 1px;
+    font-family: Romanica;
+    animation: logo-text 2s ease;
+}
+.logo-container svg {
+    position: absolute;
+    top: -47%;
+    right: -53%;
+    color: #f7effd;
+    animation: shining 2s ease;
+}
+
+.range {
+    position: relative;
+    background-color: #333;
+    width: 300px;
+    height: 30px;
+    transform: skew(30deg);
+    font-family: 'Orbitron', monospace;
+    
+    &:before {
+      --width: calc(var(--p) * 1%);
+      
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #c0392b;
+      z-index: 0;
+      animation: load 6s forwards linear;
+    }
+    
+    &__label {
+      transform: skew(-30deg) translateY(-100%);
+      line-height: 1.5;
+    }
+  }
+.loading-text{
+    font-size: large;
+    font-weight: bold;
+    font-family: Venite;
+    color: white;
+}
+.loading-container{
+    background-color: #2c3e50;
+    width: 100vw;
+    height: 100vh;
+    animation: background 3s ease;
+}
+.progress-bar-container{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+.game-text{
+    color: #c0392b;
+    font-size: 7rem;
+    font-family: Roboto;
+}
+.game-text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .main{
@@ -17,6 +93,7 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 .menu-container{
     width: 25vw;
@@ -39,15 +116,55 @@ body{
 }
 
 
-@keyframes logo {
+
+@keyframes logo-text {
     0%{
-        transform: translate(-50%,-50%) scale(1);
+        transform: translate(-50%,-50%) scale(0);
     }
     100%{
-        transform: translate(-51%,-51%) scale(0);
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+@keyframes shining {
+    0%{
+        transform: rotate(0deg) scale(0);
+        display: inline-block;
+    }
+    50%{
+        transform: rotate(360deg) scale(.1);
+    }
+    100%{
+        transform: rotate(0deg) scale(0);
+    }
+}
+@keyframes background {
+    0%{
+        height: 0vh;
+    }
+    100%{
+        height: 100vh;
     }
 }
 
+@keyframes load {
+    to {
+        width:100%;
+    }
+}
+@keyframes count {
+    0%{
+        content: 0'%';
+    }
+    25%{
+        content: 25'%';
+    }
+    50%{
+        content: 50'%';
+    }
+    100%{
+        content: 100'%';
+    }
+}
 @media screen and (max-height:481px){
     .menu-btn{
         font-size: medium;

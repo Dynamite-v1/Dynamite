@@ -1,8 +1,20 @@
-body{
-    font-family: Venite;
+@font-face {
+    font-family: 'Venite';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/VeniteAdoremus-rgRBA.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Venite';
-    src: url(../font/VeniteAdoremus-rgRBA.ttf) format('truetype');
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Romanica';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/Romanica.ttf) format('truetype');
 }
