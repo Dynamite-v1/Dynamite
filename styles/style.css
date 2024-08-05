@@ -3,93 +3,100 @@ body{
 }
 
 .logo-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transition: all ease 2S;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 .logo-container h1 {
+    font-size: 6rem ;
     color: #c0392b;
     font-weight: bold;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 58%;
     transform: translate(-50%,-50%);
     text-wrap: nowrap;
     text-shadow: black 1px 1px 1px;
     font-family: Romanica;
-    animation: logo-text 2s ease;
+    z-index: 1;
+    animation: logo-text 2s ease-in-out;
 }
 .logo-container svg {
+    width: 30px;
     position: absolute;
-    top: -47%;
-    right: -53%;
+    top: 47%;
+    left: 33%;
     color: #f7effd;
     animation: shining 2s ease;
 }
+.logo-container img {
+    position: absolute;
+    height: 7.5rem;
+    top: 53%;
+    left: 33%;
+    transform: translate(-50%,-50%) rotate(-20deg);
+}
 
-.range {
-    position: relative;
-    background-color: #333;
-    width: 300px;
-    height: 30px;
-    transform: skew(30deg);
-    font-family: 'Orbitron', monospace;
-    
-    &:before {
-      --width: calc(var(--p) * 1%);
-      
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: #c0392b;
-      z-index: 0;
-      animation: load 6s forwards linear;
-    }
-    
-    &__label {
-      transform: skew(-30deg) translateY(-100%);
-      line-height: 1.5;
-    }
-  }
 .loading-text{
     font-size: large;
     font-weight: bold;
     font-family: Venite;
     color: white;
+    position: absolute;
+    bottom: 125px;
+    left: 72%;
+    transform: translate(-50%,0px);
 }
 .loading-container{
-    background-color: #2c3e50;
+    position: relative;
+    background-color: black;
     width: 100vw;
     height: 100vh;
     animation: background 3s ease;
 }
 .progress-bar-container{
-    position: absolute;
+    /* position: absolute;
     bottom: 20px;
     left: 50%;
-    transform: translate(-50%,0%);
+    transform: translate(-50%,0%); */
+    border: 5px solid rgba(255,255,255) ;
+    padding: 2px;
+    width: 50%;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translate(-50%,0px);
 }
-.game-text{
-    color: #c0392b;
-    font-size: 7rem;
-    font-family: Roboto;
+.progress-bar{
+    background-image:linear-gradient(-45deg,rgba(255,255,255,.9) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.9) 75%,transparent 75%,transparent);
+    background-color: #413f3f;
+}
+.progress{
+    animation: load 6s linear;
+
 }
 .game-text-container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    display: flex;
+}
+.game-text{
+    color: #c0392b;
+    font-size: 7rem;
+    font-family: Roboto;
+}
+.game-logo{
+    width: 150px;
+    transform: rotate(-80deg);
+    margin: -15px;
 }
 
 .main{
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/IMG_20240721_151428_281.jpg);
+    background-image: url(../img/bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -113,16 +120,19 @@ body{
     display: inline-block;
     color: white;
     font-size: xx-large;
+    font-family: Venite;
 }
 
 
 
 @keyframes logo-text {
     0%{
-        transform: translate(-50%,-50%) scale(0);
+        transform: translate(-50%,-50%);
+        opacity: 0;
     }
     100%{
-        transform: translate(-50%,-50%) scale(1);
+        transform: translate(-50%,-50%);
+        opacity: 1;
     }
 }
 @keyframes shining {
@@ -131,7 +141,7 @@ body{
         display: inline-block;
     }
     50%{
-        transform: rotate(360deg) scale(.1);
+        transform: rotate(360deg) scale(1);
     }
     100%{
         transform: rotate(0deg) scale(0);
@@ -147,6 +157,9 @@ body{
 }
 
 @keyframes load {
+    from {
+        width: 0px;
+    }
     to {
         width:100%;
     }
