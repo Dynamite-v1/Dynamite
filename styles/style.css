@@ -1,40 +1,81 @@
 body{
     overflow: hidden;
+    background-color: rgba(27, 27, 27, 0.3);
+}
+
+.modal-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    /* height: 25%; */
+    background-color: #fff;
+    z-index: 1111;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.modal-head{
+    font-family: Roboto;
+    padding-bottom: 5px;
+    border-bottom: 1px rgba(65, 63, 63,.1) solid;
+}
+.modal-btn-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 .logo-container{
     position: relative;
     width: 100vw;
     height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
-.logo-container h1 {
+.logo-main-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 10px;
+}
+.logo-img-container{
+    position: relative;
+}
+.logo-main-container h1 {
     font-size: 6rem ;
     color: #c0392b;
     font-weight: bold;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 58%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     text-wrap: nowrap;
     text-shadow: black 1px 1px 1px;
     font-family: Romanica;
     z-index: 1;
-    animation: logo-text 2s ease-in-out;
+    animation: logo-text 1s ease-in-out;
 }
-.logo-container svg {
+.logo-img-container svg {
     width: 30px;
     position: absolute;
-    top: 47%;
-    left: 33%;
+    top: 20%;
+    right: 10px;
     color: #f7effd;
-    animation: shining 2s ease;
+    animation: shining 1s ease;
 }
-.logo-container img {
-    position: absolute;
+.logo-img-container img {
+    /* position: absolute; */
     height: 7.5rem;
-    top: 53%;
-    left: 33%;
-    transform: translate(-50%,-50%) rotate(-20deg);
+    /* top: 53%;
+    left: 33%; */
+    transform: rotate(-20deg);
 }
 
 .loading-text{
@@ -42,17 +83,20 @@ body{
     font-weight: bold;
     font-family: Venite;
     color: white;
-    position: absolute;
-    bottom: 125px;
-    left: 72%;
-    transform: translate(-50%,0px);
+    float: right;
 }
 .loading-container{
     position: relative;
     background-color: black;
     width: 100vw;
     height: 100vh;
-    animation: background 3s ease;
+    animation: background 1s ease;
+}
+.loading-main-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
 }
 .progress-bar-container{
     /* position: absolute;
@@ -61,25 +105,26 @@ body{
     transform: translate(-50%,0%); */
     border: 5px solid rgba(255,255,255) ;
     padding: 2px;
-    width: 50%;
-    position: absolute;
+    width: 100%;
+    margin-top: 20px;
+    /* position: absolute;
     bottom: 150px;
     left: 50%;
-    transform: translate(-50%,0px);
+    transform: translate(-50%,0px); */
 }
 .progress-bar{
     background-image:linear-gradient(-45deg,rgba(255,255,255,.9) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.9) 75%,transparent 75%,transparent);
     background-color: #413f3f;
 }
 .progress{
-    animation: load 6s linear;
+    animation: load 5.5s linear;
 
 }
 .game-text-container{
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     display: flex;
 }
 .game-text{
@@ -127,11 +172,11 @@ body{
 
 @keyframes logo-text {
     0%{
-        transform: translate(-50%,-50%);
+        /* transform: translate(-50%,-50%); */
         opacity: 0;
     }
     100%{
-        transform: translate(-50%,-50%);
+        /* transform: translate(-50%,-50%); */
         opacity: 1;
     }
 }
@@ -164,20 +209,6 @@ body{
         width:100%;
     }
 }
-@keyframes count {
-    0%{
-        content: 0'%';
-    }
-    25%{
-        content: 25'%';
-    }
-    50%{
-        content: 50'%';
-    }
-    100%{
-        content: 100'%';
-    }
-}
 @media screen and (max-height:481px){
     .menu-btn{
         font-size: medium;
@@ -188,5 +219,21 @@ body{
     .menu{
         gap: 15px;
         margin-top: 5px;
+    }
+    .modal-head h3{
+        font-weight: 450;
+        font-size: large;
+    }
+    .modal-container{
+        width: 50%;
+    }
+    .logo-main-container h1{
+        font-size: 4rem;
+    }
+    .logo-main-container img {
+        height: 5rem;
+    }
+    .logo-img-container svg {
+        width: 20px;
     }
 }

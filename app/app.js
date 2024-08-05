@@ -1,7 +1,10 @@
 const $ = document
 
-let amethystNewSound = new Audio('amethyst.mp3')
-let amethystSound = $.querySelector('.amethyst-sound')
+let amethystSound = new Audio('./musics/amethyst.mp3')
+let dynamiteSound = new Audio('./musics/Creeper_fuse.ogg')
+const modal = $.querySelector('.modal-container')
+const accessBtn = $.querySelector('.access-btn')
+const rejectBtn = $.querySelector('.reject-btn')
 const logo = $.querySelector('.logo-container')
 const logoShineSvg = $.querySelector('.logo-shine')
 const logoText = $.querySelector('.logo-text')
@@ -14,15 +17,29 @@ const progressBar = $.querySelector('.progress-bar')
 const range = $.querySelector('.range')
 const main = $.querySelector('.main')
 
+let soundEffectsFlag = false
+
 main.style.display = 'none'
 
+logo.style.display = 'none'
 loadingContainer.style.display  = 'none'
 gameText.style.display = 'none'
 progressBarContainer.style.display = 'none'
 gameLogo.style.display = 'none'
 
-amethystSound.play()
-amethystNewSound.play()
+accessBtn.addEventListener('click', e => {
+    $.body.style.backgroundColor = '#fff'
+    modal.style.display = 'none'
+    logo.style.display = 'inline-block'
+    soundEffectsFlag = true
+    soundEffectsFlag && amethystSound.play()
+})
+rejectBtn.addEventListener('click', e => {
+    $.body.style.backgroundColor = '#fff'
+    modal.style.display = 'none'
+    logo.style.display = 'inline-block'
+})
+
 logoShineSvg.addEventListener('animationend', (e) => {
     e.target.style.display = 'none'
 })
@@ -34,11 +51,8 @@ loadingContainer.addEventListener('animationend', () => {
     gameText.style.display = 'inline-block'
     progressBarContainer.style.display = 'inline-block'
     gameLogo.style.display = 'inline-block'
+   soundEffectsFlag &&  dynamiteSound.play()
 })
-// progressBar.addEventListener('animationend', () => {
-//     loadingContainer.style.display = 'none'
-//     main.style.display = 'block'
-// })
 progressBar.addEventListener('animationstart', () => {
 let n = 1
 let loadingText = setInterval(() => {
@@ -49,6 +63,7 @@ let loadingText = setInterval(() => {
     }else{
         loadingContainer.style.display = 'none'
         main.style.display = 'block'
+        soundEffectsFlag && dynamiteSound.pause()
         clearInterval(loadingText)
     }
 },60)
