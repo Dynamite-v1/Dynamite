@@ -69,11 +69,12 @@ let loadingText = setInterval(() => {
         n++
     }else{
         soundEffectsFlag && dynamiteSound.pause()
-        if (location.host == 'https://dynamite-v1.github.io/'){
-            window.location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
-        }else{
-            location.replace('/start-page.html')
-        }
+        console.log(location.host)
+        // if (location.host == 'https://dynamite-v1.github.io/'){
+        //     window.location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
+        // }else{
+        //     location.replace('/start-page.html')
+        // }
         clearInterval(loadingText)
     }
 },60)
