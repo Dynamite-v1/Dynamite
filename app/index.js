@@ -69,7 +69,7 @@ let loadingText = setInterval(() => {
         n++
     }else{
         soundEffectsFlag && dynamiteSound.pause()
-        console.log(location.host)
+        // console.log(location.host)
         if (location.host == 'dynamite-v1.github.io'){
             location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
         }else{
