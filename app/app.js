@@ -64,8 +64,11 @@ let loadingText = setInterval(() => {
         loadingContainer.style.display = 'none'
         main.style.display = 'block'
         soundEffectsFlag && dynamiteSound.pause()
-
-        console.log(location.host + '/start-page.html')
+        if (location.host == 'https://dynamite-v1.github.io/'){
+            window.location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
+        }else{
+            location.replace('/start-page.html')
+        }
         clearInterval(loadingText)
     }
 },60)
