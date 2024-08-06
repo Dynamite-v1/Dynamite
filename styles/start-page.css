@@ -10,6 +10,8 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .menu-container{
     width: 25vw;
@@ -30,6 +32,11 @@ body{
     color: white;
     font-size: xx-large;
     font-family: Venite;
+    cursor: pointer;
+}
+.menu-btn:active{
+    opacity: .9;
+    transform: scale(.9);
 }
 
 @media screen and (max-height:481px){

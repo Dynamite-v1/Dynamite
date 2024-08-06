@@ -1,7 +1,7 @@
 const $ = document
 
-let amethystSound = new Audio('./musics/amethyst.mp3')
-let dynamiteSound = new Audio('./musics/Creeper_fuse.ogg')
+let amethystSound = new Audio('./music/sound effects/logo/amethyst.mp3')
+let dynamiteSound = new Audio('./music/sound effects/logo/Creeper_fuse.ogg')
 const modal = $.querySelector('.modal-container')
 const accessBtn = $.querySelector('.access-btn')
 const rejectBtn = $.querySelector('.reject-btn')
