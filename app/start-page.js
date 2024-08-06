@@ -1,7 +1,7 @@
 let backgroundMusics = [
-    new Audio('/music/background musics/background music (1).mp3'),
-    new Audio('/music/background musics/background music (2).mp3'),
-    new Audio('/music/background musics/background music (3).mp3'),
+    new Audio('./music/background musics/background music (1).mp3'),
+    new Audio('./music/background musics/background music (2).mp3'),
+    new Audio('./music/background musics/background music (3).mp3'),
 ]
 let soundEffects = [
     new Audio('../music/sound effects/click/click.mp3')
