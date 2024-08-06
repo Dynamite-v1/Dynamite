@@ -1,0 +1,46 @@
+body{
+    overflow: hidden;
+    margin: 0px;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.menu-container{
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.menu-btn{
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
+    font-family: Venite;
+}
+
+@media screen and (max-height:481px){
+    .menu-btn{
+        font-size: medium;
+    }
+    .menu-container{
+        align-items: start;
+    }
+    .menu{
+        gap: 15px;
+        margin-top: 5px;
+    }
+}

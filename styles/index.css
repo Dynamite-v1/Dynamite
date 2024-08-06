@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: rgba(27, 27, 27, 0.3);
 }
 
@@ -9,7 +9,6 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 25%;
-    /* height: 25%; */
     background-color: #fff;
     z-index: 1111;
     padding: 20px;
@@ -33,9 +32,6 @@ body{
     position: relative;
     width: 100vw;
     height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 .logo-main-container{
     position: absolute;
@@ -52,15 +48,11 @@ body{
     font-size: 6rem ;
     color: #c0392b;
     font-weight: bold;
-    /* position: absolute;
-    top: 50%;
-    left: 58%;
-    transform: translate(-50%,-50%); */
     text-wrap: nowrap;
     text-shadow: black 1px 1px 1px;
     font-family: Romanica;
     z-index: 1;
-    animation: logo-text 1s ease-in-out;
+    animation: logo-text 2s ease-in-out;
 }
 .logo-img-container svg {
     width: 30px;
@@ -68,13 +60,10 @@ body{
     top: 20%;
     right: 10px;
     color: #f7effd;
-    animation: shining 1s ease;
+    animation: shining 3s ease;
 }
 .logo-img-container img {
-    /* position: absolute; */
     height: 7.5rem;
-    /* top: 53%;
-    left: 33%; */
     transform: rotate(-20deg);
 }
 
@@ -99,18 +88,10 @@ body{
     transform: translate(-50%,-50%); 
 }
 .progress-bar-container{
-    /* position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%,0%); */
     border: 5px solid rgba(255,255,255) ;
     padding: 2px;
     width: 100%;
     margin-top: 20px;
-    /* position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translate(-50%,0px); */
 }
 .progress-bar{
     background-image:linear-gradient(-45deg,rgba(255,255,255,.9) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.9) 75%,transparent 75%,transparent);
@@ -121,10 +102,6 @@ body{
 
 }
 .game-text-container{
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
     display: flex;
 }
 .game-text{
@@ -138,45 +115,13 @@ body{
     margin: -15px;
 }
 
-.main{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../img/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.menu-container{
-    width: 25vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0px;
-    margin-bottom: 0px;
-}
-.menu-btn{
-    display: inline-block;
-    color: white;
-    font-size: xx-large;
-    font-family: Venite;
-}
-
 
 
 @keyframes logo-text {
     0%{
-        /* transform: translate(-50%,-50%); */
         opacity: 0;
     }
     100%{
-        /* transform: translate(-50%,-50%); */
         opacity: 1;
     }
 }
@@ -210,16 +155,6 @@ body{
     }
 }
 @media screen and (max-height:481px){
-    .menu-btn{
-        font-size: medium;
-    }
-    .menu-container{
-        align-items: start;
-    }
-    .menu{
-        gap: 15px;
-        margin-top: 5px;
-    }
     .modal-head h3{
         font-weight: 450;
         font-size: large;

@@ -15,11 +15,9 @@ const gameLogo = $.querySelector('.game-logo')
 const progressBarContainer = $.querySelector('.progress-bar-container')
 const progressBar = $.querySelector('.progress-bar')
 const range = $.querySelector('.range')
-const main = $.querySelector('.main')
+
 
 let soundEffectsFlag = false
-
-main.style.display = 'none'
 
 logo.style.display = 'none'
 loadingContainer.style.display  = 'none'
@@ -30,18 +28,27 @@ gameLogo.style.display = 'none'
 accessBtn.addEventListener('click', e => {
     $.body.style.backgroundColor = '#fff'
     modal.style.display = 'none'
-    logo.style.display = 'inline-block'
-    soundEffectsFlag = true
-    soundEffectsFlag && amethystSound.play()
+    setTimeout(() => {
+        logo.style.display = 'inline-block'
+        setTimeout(() =>{
+            soundEffectsFlag = true
+            soundEffectsFlag && amethystSound.play()
+        },1000)
+    },1000)
+
 })
 rejectBtn.addEventListener('click', e => {
     $.body.style.backgroundColor = '#fff'
     modal.style.display = 'none'
-    logo.style.display = 'inline-block'
+    setTimeout(() => {
+        logo.style.display = 'inline-block'
+    },700)
 })
 
 logoShineSvg.addEventListener('animationend', (e) => {
-    e.target.style.display = 'none'
+    setTimeout(() => {
+        e.target.style.display = 'none'
+    },700)
 })
 logoText.addEventListener('animationend', e => {
     logo.style.display = 'none'
@@ -62,7 +69,6 @@ let loadingText = setInterval(() => {
         n++
     }else{
         loadingContainer.style.display = 'none'
-        main.style.display = 'block'
         soundEffectsFlag && dynamiteSound.pause()
         if (location.host == 'https://dynamite-v1.github.io/'){
             window.location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
