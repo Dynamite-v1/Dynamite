@@ -64,6 +64,8 @@ let loadingText = setInterval(() => {
         loadingContainer.style.display = 'none'
         main.style.display = 'block'
         soundEffectsFlag && dynamiteSound.pause()
+
+        console.log(location.host + '/start-page.html')
         clearInterval(loadingText)
     }
 },60)
