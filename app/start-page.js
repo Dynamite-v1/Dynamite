@@ -60,7 +60,6 @@ function option () {
 function credit () {
     backBtn.style.display = 'inline-block'
     backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit]); backBtn.style.display = 'none'})
-
 }
 
 function newGame () {
