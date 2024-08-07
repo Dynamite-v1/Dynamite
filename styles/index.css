@@ -52,15 +52,29 @@ body{
     text-shadow: black 1px 1px 1px;
     font-family: Romanica;
     z-index: 1;
-    animation: logo-text 2s ease-in-out;
+    animation: logo-text 4s ease;
 }
 .logo-img-container svg {
-    width: 30px;
     position: absolute;
-    top: 20%;
-    right: 10px;
     color: #f7effd;
-    animation: shining 3s ease;
+}
+.main-svg{
+    width: 17px;
+    top: 14px;
+    right: 19px;
+    animation: shining 1s ease 0s 5;
+}
+.up-right-svg{
+    width: 10px;
+    top: 12px;
+    right: 13px;
+    animation: shining 1s ease .3s 5;
+}
+.down-right-svg{
+    width: 10px;
+    top: 25px;
+    right: 13px;
+    animation: shining 1s ease .5s 5;
 }
 .logo-img-container img {
     height: 7.5rem;
@@ -127,14 +141,14 @@ body{
 }
 @keyframes shining {
     0%{
-        transform: rotate(0deg) scale(0);
+        transform: scale(.5);
         display: inline-block;
     }
     50%{
-        transform: rotate(360deg) scale(1);
+        transform: scale(1);
     }
     100%{
-        transform: rotate(0deg) scale(0);
+        transform: scale(.5);
     }
 }
 @keyframes background {
@@ -169,6 +183,6 @@ body{
         height: 5rem;
     }
     .logo-img-container svg {
-        width: 20px;
+        /* width: 20px; */
     }
 }

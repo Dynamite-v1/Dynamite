@@ -1,11 +1,11 @@
-let backgroundMusics = [
-    new Audio('./music/background musics/background music (1).mp3'),
-    new Audio('./music/background musics/background music (2).mp3'),
-    new Audio('./music/background musics/background music (3).mp3'),
-]
-let soundEffects = [
-    new Audio('./music/sound effects/click/click.mp3')
-]
+// let backgroundMusics = [
+//     new Audio('./music/background musics/background music (1).mp3'),
+//     new Audio('./music/background musics/background music (2).mp3'),
+//     new Audio('./music/background musics/background music (3).mp3'),
+// ]
+// let soundEffects = [
+//     new Audio('./music/sound effects/click/click.mp3')
+// ]
 
 const $ = document
 const ul = $.querySelector('ul')
@@ -26,48 +26,41 @@ function liCreator  (liCount,texts,onClick) {
 }
 
 function start () {
-    soundEffects[0].play()
 
     liCreator(3,['start','options','credits'],[story,option,credit])
 
-    let i = 0
-    let j = 0
-    setInterval(() => {
-        if (j == 0 || backgroundMusics[i].currentTime >= backgroundMusics[i].duration) {
-            backgroundMusics[i].currentTime = 0
-            i += 1
-            if(i == 3) {i = 0}
-            console.log(i)
-            backgroundMusics[i].play()
-            j++
-        }
-    },1000)
+    // let i = 0
+    // let j = 0
+    // setInterval(() => {
+    //     if (j == 0 || backgroundMusics[i].currentTime >= backgroundMusics[i].duration) {
+    //         backgroundMusics[i].currentTime = 0
+    //         i += 1
+    //         if(i == 3) {i = 0}
+    //         console.log(i)
+    //         backgroundMusics[i].play()
+    //         j++
+    //     }
+    // },1000)
 
 }
 
 function story () {
-    soundEffects[0].play()
     liCreator(3,['new game','load game','chapters'],[newGame,oldGame,Chapters])
 }
 function option () {
-    soundEffects[0].play()
 
 }
 function credit () {
-    soundEffects[0].play()
 
 }
 
 function newGame () {
-    soundEffects[0].play()
 
 }
 function oldGame () {
-    soundEffects[0].play()
 
 }
 function Chapters () {
-    soundEffects[0].play()
 
 }
 
