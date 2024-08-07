@@ -1,6 +1,7 @@
 body{
     overflow: hidden;
     margin: 0px;
+    padding: 0px;
 }
 .main{
     width: 100vw;
@@ -19,6 +20,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+.main svg{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.main svg:active{
+    opacity: .9;
+    transform: scale(.9);
+}
 .menu{
     display: flex;
     flex-direction: column;
@@ -30,7 +42,7 @@ body{
     display: inline-block;
     color: white;
     font-size: xx-large;
-    font-family: Venite;
+    font-family: Roboto;
     cursor: pointer;
 }
 .menu-btn:active{
@@ -40,7 +52,7 @@ body{
 
 @media screen and (max-height:481px){
     .menu-btn{
-        font-size: medium;
+        font-size: large;
     }
     .menu-container{
         align-items: start;

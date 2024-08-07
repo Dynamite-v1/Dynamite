@@ -10,6 +10,7 @@
 const $ = document
 const ul = $.querySelector('ul')
 const menuContainer = $.querySelector('.menu-container')
+const backBtn = $.querySelector('svg')
 
 function liCreator  (liCount,texts,onClick) {
     ul.innerHTML = ''
@@ -42,15 +43,23 @@ function start () {
     //     }
     // },1000)
 
+    backBtn.style.display = 'none'
+
 }
 
 function story () {
     liCreator(3,['new game','load game','chapters'],[newGame,oldGame,Chapters])
+    backBtn.style.display = 'inline-block'
+    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit])})
 }
 function option () {
+    backBtn.style.display = 'inline-block'
+    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit])})
 
 }
 function credit () {
+    backBtn.style.display = 'inline-block'
+    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit])})
 
 }
 
@@ -66,3 +75,4 @@ function Chapters () {
 
 liCreator(1,['tap to start'],start)
 menuContainer.style.alignItems = 'center'
+backBtn.style.display = 'none'
