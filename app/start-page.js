@@ -50,16 +50,16 @@ function start () {
 function story () {
     liCreator(3,['new game','load game','chapters'],[newGame,oldGame,Chapters])
     backBtn.style.display = 'inline-block'
-    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit])})
+    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit]); backBtn.style.display = 'none'})
 }
 function option () {
     backBtn.style.display = 'inline-block'
-    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit])})
+    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit]); backBtn.style.display = 'none'})
 
 }
 function credit () {
     backBtn.style.display = 'inline-block'
-    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit])})
+    backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit]); backBtn.style.display = 'none'})
 
 }
 
