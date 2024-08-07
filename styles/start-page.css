@@ -52,7 +52,7 @@ body{
 
 @media screen and (max-height:481px){
     .menu-btn{
-        font-size: large;
+        font-size: x-large;
     }
     .menu-container{
         align-items: start;

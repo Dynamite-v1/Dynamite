@@ -28,7 +28,7 @@ function liCreator  (liCount,texts,onClick) {
 
 function start () {
 
-    liCreator(3,['start','options','credits'],[story,option,credit])
+    liCreator(4,['start','options','credits','exit'],[story,option,credit,exit])
 
     // let i = 0
     // let j = 0
@@ -60,6 +60,9 @@ function option () {
 function credit () {
     backBtn.style.display = 'inline-block'
     backBtn.addEventListener('click', () => {liCreator(3,['start','options','credits'],[story,option,credit]); backBtn.style.display = 'none'})
+}
+function exit () {
+    window.close()
 }
 
 function newGame () {
