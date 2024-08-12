@@ -63,6 +63,7 @@ function credit () {
         liCreator(4,['start','options','credits','exit'],[story,option,credit,exit]); backBtn.style.display = 'none'
 }
 function exit () {
+    console.log('fsroijngfrws')
     window.close()
 }
 

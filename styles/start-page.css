@@ -50,6 +50,15 @@ body{
     transform: scale(.9);
 }
 
+.code{
+    position: fixed;
+    transform: rotate(90deg) translate(0px,-50%);
+    top: 50%;
+    right: 0px;
+    color: #FFF;
+    font-size: 10px;
+}
+
 @media screen and (max-height:481px){
     .menu-btn{
         font-size: x-large;
