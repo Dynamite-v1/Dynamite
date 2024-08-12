@@ -19,8 +19,9 @@ function liCreator  (liCount,texts,onClick) {
         let liElem = document.createElement('li');
         liElem.className = 'menu-btn'
         liElem.innerHTML = texts[i]
-        onClick && liElem.addEventListener('click', onClick)
-        onClick[0] && liElem.addEventListener('click', onClick[i])
+        // onClick && liElem.addEventListener('click', onClick)
+        onClick[0] ? liElem.addEventListener('click', onClick[i]) 
+        : onClick && liElem.addEventListener('click', onClick) 
 
         ul.appendChild(liElem)
     }
@@ -50,7 +51,7 @@ function start () {
 function story () {
     liCreator(3,['new game','load game','chapters'],[newGame,oldGame,Chapters])
     backBtn.style.display = 'inline-block'
-        liCreator(4,['start','options','credits','exit'],[story,option,credit,exit]); backBtn.style.display = 'none'
+    backBtn.addEventListener('click',() => back(4,['start','options','credits','exit'],[story,option,credit,exit]))
 }
 function option () {
     backBtn.style.display = 'inline-block'
@@ -73,6 +74,12 @@ function oldGame () {
 }
 function Chapters () {
 
+}
+
+function back (liCount,texts,onClick) {
+    liCreator(liCount,texts,onClick)
+    backBtn.style.display = 'none'
+    backBtn.removeEventListener('click', () => back(liCount,texts,onClick))
 }
 
 liCreator(1,['tap to start'],start)
