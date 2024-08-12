@@ -59,21 +59,21 @@ body{
     color: #f7effd;
 }
 .main-svg{
-    width: 17px;
+    width: 25px;
     top: 14px;
     right: 19px;
     animation: shining 1s ease 0s 5;
     text-shadow: 1px 1px 2px #413f3f ;
 }
 .up-right-svg{
-    width: 10px;
+    width: 18px;
     top: 12px;
     right: 13px;
     animation: shining 1s ease .3s 5;
     text-shadow: 0 0 1px 2px #413f3f ;
 }
 .down-right-svg{
-    width: 10px;
+    width: 18px;
     top: 25px;
     right: 13px;
     animation: shining 1s ease .5s 5;
@@ -123,11 +123,11 @@ body{
 }
 .game-text{
     color: #c0392b;
-    font-size: 7rem;
+    font-size: 8rem;
     font-family: Roboto;
 }
 .game-logo{
-    width: 150px;
+    width: 170px;
     transform: rotate(-80deg);
     margin: -15px;
     position: relative;
@@ -136,7 +136,7 @@ body{
     width: 35px;
     height: 35px;
     position: absolute;
-    right: 90px;
+    right: 106px;
 }
 
 
