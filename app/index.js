@@ -6,7 +6,7 @@ const modal = $.querySelector('.modal-container')
 const accessBtn = $.querySelector('.access-btn')
 const rejectBtn = $.querySelector('.reject-btn')
 const logo = $.querySelector('.logo-container')
-const logoShineSvg = $.querySelector('.logo-shine')
+// const logoShineSvg = $.querySelector('.logo-shine')
 const logoText = $.querySelector('.logo-text')
 const loadingContainer = $.querySelector('.loading-container')
 const loadingBarText = $.querySelector('.loading-text')
@@ -34,7 +34,7 @@ accessBtn.addEventListener('click', e => {
         logo.style.display = 'inline-block'
         setTimeout(() =>{
             soundEffectsFlag = true
-            soundEffectsFlag && amethystSound.play()
+            // soundEffectsFlag && amethystSound.play()
         },1000)
     },1000)
 
@@ -47,11 +47,6 @@ rejectBtn.addEventListener('click', e => {
     },700)
 })
 
-logoShineSvg.addEventListener('animationend', (e) => {
-    setTimeout(() => {
-        e.target.style.display = 'none'
-    },700)
-})
 logoText.addEventListener('animationend', e => {
     logo.style.display = 'none'
     loadingContainer.style.display  = 'block'
@@ -73,11 +68,11 @@ let loadingText = setInterval(() => {
     }else{
         soundEffectsFlag && dynamiteSound.pause()
         // console.log(location.host)
-        if (location.host == 'dynamite-v1.github.io'){
-            location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
-        }else{
-            location.replace('/start-page.html')
-        }
+        // if (location.host == 'dynamite-v1.github.io'){
+        //     location.replace('https://dynamite-v1.github.io/Dynamite/start-page.html')
+        // }else{
+        //     location.replace('/start-page.html')
+        // }
         clearInterval(loadingText)
     }
 },60)

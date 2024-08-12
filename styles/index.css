@@ -58,27 +58,7 @@ body{
     position: absolute;
     color: #f7effd;
 }
-.main-svg{
-    width: 30px;
-    top: 14px;
-    right: 19px;
-    animation: shining 1s ease 0s 5;
-    text-shadow: 1px 1px 2px #413f3f ;
-}
-.up-right-svg{
-    width: 20px;
-    top: 12px;
-    right: 13px;
-    animation: shining 1s ease .3s 5;
-    text-shadow: 0 0 1px 2px #413f3f ;
-}
-.down-right-svg{
-    width: 20px;
-    top: 25px;
-    right: 13px;
-    animation: shining 1s ease .5s 5;
-    text-shadow: 0 0 1px 2px #413f3f ;
-}
+
 .logo-img-container img {
     height: 7.5rem;
     transform: rotate(-20deg);
@@ -90,6 +70,7 @@ body{
     font-family: Venite;
     color: white;
     float: right;
+    margin-right: 39px;
 }
 .loading-container{
     position: relative;
@@ -107,37 +88,42 @@ body{
 .progress-bar-container{
     border: 5px solid rgba(255,255,255) ;
     padding: 2px;
-    width: 100%;
+    width: 80%;
+    margin: 39px;
     margin-top: 20px;
+    margin-bottom: 0px;
+}
+.progress-main-container{
+    width: 100%;
 }
 .progress-bar{
-    background-image:linear-gradient(-45deg,rgba(255,255,255,.9) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.9) 75%,transparent 75%,transparent);
-    background-color: #413f3f;
+    /* background-image:linear-gradient(-45deg,rgba(255,255,255,.9) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.9) 75%,transparent 75%,transparent); */
+    background-color: #fff;
 }
 .progress{
     animation: load 5.5s linear;
-
 }
 .game-text-container{
     display: flex;
 }
 .game-text{
     color: #c0392b;
-    font-size: 6.5rem;
+    font-size: 4rem;
     font-family: Roboto;
+    margin-left: 10px;
 }
 .game-logo{
-    width: 150px;
+    width: 115px;
     transform: rotate(-80deg);
     margin: -15px;
     position: relative;
 }
 .dynamite-fire{
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    right: 70px;
-    top: -20px;
+    right: 48px;
+    top: -23px;
 }
 
 
