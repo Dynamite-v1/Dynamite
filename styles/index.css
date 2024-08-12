@@ -59,21 +59,21 @@ body{
     color: #f7effd;
 }
 .main-svg{
-    width: 25px;
+    width: 30px;
     top: 14px;
     right: 19px;
     animation: shining 1s ease 0s 5;
     text-shadow: 1px 1px 2px #413f3f ;
 }
 .up-right-svg{
-    width: 18px;
+    width: 20px;
     top: 12px;
     right: 13px;
     animation: shining 1s ease .3s 5;
     text-shadow: 0 0 1px 2px #413f3f ;
 }
 .down-right-svg{
-    width: 18px;
+    width: 20px;
     top: 25px;
     right: 13px;
     animation: shining 1s ease .5s 5;
@@ -123,20 +123,21 @@ body{
 }
 .game-text{
     color: #c0392b;
-    font-size: 8rem;
+    font-size: 6.5rem;
     font-family: Roboto;
 }
 .game-logo{
-    width: 200px;
+    width: 150px;
     transform: rotate(-80deg);
     margin: -15px;
     position: relative;
 }
 .dynamite-fire{
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     position: absolute;
-    right: 117px;
+    right: 70px;
+    top: -20px;
 }
 
 
