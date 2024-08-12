@@ -127,7 +127,7 @@ body{
     font-family: Roboto;
 }
 .game-logo{
-    width: 170px;
+    width: 200px;
     transform: rotate(-80deg);
     margin: -15px;
     position: relative;
@@ -136,7 +136,7 @@ body{
     width: 35px;
     height: 35px;
     position: absolute;
-    right: 106px;
+    right: 117px;
 }
 
 

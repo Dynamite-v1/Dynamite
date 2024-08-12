@@ -12,6 +12,7 @@ const loadingContainer = $.querySelector('.loading-container')
 const loadingBarText = $.querySelector('.loading-text')
 const gameText = $.querySelector('.game-text')
 const gameLogo = $.querySelector('.game-logo')
+const gameLogoFire = $.querySelector('.dynamite-fire')
 const progressBarContainer = $.querySelector('.progress-bar-container')
 const progressBar = $.querySelector('.progress-bar')
 const range = $.querySelector('.range')
@@ -24,6 +25,7 @@ loadingContainer.style.display  = 'none'
 gameText.style.display = 'none'
 progressBarContainer.style.display = 'none'
 gameLogo.style.display = 'none'
+gameLogoFire.style.display = 'none'
 
 accessBtn.addEventListener('click', e => {
     $.body.style.backgroundColor = '#fff'
@@ -58,6 +60,7 @@ loadingContainer.addEventListener('animationend', () => {
     gameText.style.display = 'inline-block'
     progressBarContainer.style.display = 'inline-block'
     gameLogo.style.display = 'inline-block'
+    gameLogoFire.style.display = 'inline-block'
    soundEffectsFlag &&  dynamiteSound.play()
 })
 progressBar.addEventListener('animationstart', () => {
